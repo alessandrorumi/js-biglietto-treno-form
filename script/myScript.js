@@ -13,19 +13,38 @@ const inputUserName = document.getElementById('userName');
 // Dichiarazione Distanza
 const inputKm = document.getElementById('km');
 
+// Dichiarazione Età
+const inputAge = document.getElementById('age');
+
 // Dichiarazione Button 
 const generateTicket = document.getElementById('generateTicket');
 
 // Dichiarazione Risultato in span (Nome Passeggero)
 const printedName = document.getElementById('printedName');
 
+// Dichiarazione Risultato in span (€ Biglietto)
+const printedPrice = document.getElementById('printedPrice');
+
 generateTicket.addEventListener('click',
 
   function() {
+    // Stampa del nome all'interno di Span nella sez. 'Il tuo biglietto'
     const outputUserName = userName.value;
     printedName.textContent = outputUserName;
-  }
 
+    // Stampa del prezzo del biglietto all'interno di Span nella sez. 'Il tuo biglietto'
+    const outputKm = parseInt(inputKm.value);
+    const outputAge = parseInt(inputAge.value)
+    let price = 0.21 * outputKm;
+
+      if (outputAge < 18) {
+        price = price * 0.8;
+      } else if (outputAge > 65) {
+        price = price * 0.6;
+      }
+
+    printedPrice.textContent = price.toFixed(2) + "€";
+  }
 );
 
 
