@@ -7,25 +7,26 @@ va applicato uno sconto del 40% per gli over 65.
 L’output del prezzo finale avrà massimo due decimali
 */
 
-// Es. 
+// Dichiarazione Nome Utente
+const inputUserName = document.getElementById('userName');
 
-// Età
+// Dichiarazione Distanza
+const inputKm = document.getElementById('km');
 
+// Dichiarazione Button 
+const generateTicket = document.getElementById('generateTicket');
 
-// Nr. Km
+// Dichiarazione Risultato in span (Nome Passeggero)
+const printedName = document.getElementById('printedName');
 
+generateTicket.addEventListener('click',
 
-// Prezzo del biglietto (default)
-// let price = (0.21 * km);
+  function() {
+    const outputUserName = userName.value;
+    printedName.textContent = outputUserName;
+  }
 
+);
 
-// // Tariffe agevolate
-// if (age < 18) {
-//   price = ((0.21 * km) * 0.8);
-
-// } else if (age > 65) {
-//   price = ((0.21 * km) * 0.6);
-
-// }
 
 

@@ -8,27 +8,36 @@
 </head>
 <body>
   
-  <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-  
-  <form>
-    <!-- Nome e cognome -->
-    <label for="name">Inserisci il tuo nome e cognome:</label>
-    <input type="text" id="name">
-    <br>
-    <!-- Km da percorrere -->
-    <label for="km">Quanti km devi percorrere?:</label>
-    <input type="number" id="km">
-    <br>
-    <!-- Età -->
-    <label for="age">Quanti anni hai?:</label>
-    <input type="number" id="age">
-    <br>
-    <!-- Genera -->
-    <input type="submit" value="Genera">
-    <!-- Annulla -->
-    <input type="submit" value="Annulla">
+  <div class="ticket-data">
+    <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+    <form>
+      <!-- Nome e cognome -->
+      <label for="userName">Inserisci il tuo nome e cognome:</label>
+      <input type="text" id="userName">
+      <br>
+      <!-- Km da percorrere -->
+      <label for="km">Quanti km devi percorrere?:</label>
+      <input type="number" id="km" min="0">
+      <br>
+      <!-- Età -->
+      <label for="age">Quanti anni hai?:</label>
+      <input type="number" id="age" min="0">
+      <br>
+      <!-- Genera -->
+      <button type="button" id="generateTicket">Genera</button>
+      <!-- Annulla -->
+      <button type="button" id="eliminateTicket">Annulla</button>
+    </form>
+  </div>
 
-  </form>
+  <div class="ticket-printed">
+    <h2>IL TUO BIGLIETTO</h2>
+    <h3>DETTAGLI PASSEGGERO</h3>
+    <h4>Nome Passeggero:</h4>
+    <span id="printedName"></span>
+    <h4>Costo biglietto:</h4>
+    <span id="printedPrice"></span>
+  </div>
 
   <script type="text/javascript" src="script/myScript.js"></script>
 
