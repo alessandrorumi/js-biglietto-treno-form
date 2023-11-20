@@ -1,3 +1,11 @@
 :root {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.ticket-printed {
+  display: none;
+}
+
+.active {
+  display: block;
+}

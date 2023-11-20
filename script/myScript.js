@@ -16,8 +16,15 @@ const inputKm = document.getElementById('km');
 // Dichiarazione Età
 const inputAge = document.getElementById('age');
 
-// Dichiarazione Button 
+// Dichiarazione Button (genera)
 const generateTicket = document.getElementById('generateTicket');
+
+// Dichiarazione Button (annulla)
+const eliminateTicket = document.getElementById('eliminateTicket');
+
+
+// Dichiarazione Classe 'Il tuo biglietto'
+const ticketPrinted = document.querySelector(".ticket-printed")
 
 // Dichiarazione Risultato in span (Nome Passeggero)
 const printedName = document.getElementById('printedName');
@@ -28,6 +35,10 @@ const printedPrice = document.getElementById('printedPrice');
 generateTicket.addEventListener('click',
 
   function() {
+
+    // Mostra 'Il tuo biglietto'
+    ticketPrinted.classList.add('active');
+
     // Stampa del nome all'interno di Span nella sez. 'Il tuo biglietto'
     const outputUserName = userName.value;
     printedName.textContent = outputUserName;
@@ -36,15 +47,24 @@ generateTicket.addEventListener('click',
     const outputKm = parseInt(inputKm.value);
     const outputAge = parseInt(inputAge.value)
     let price = 0.21 * outputKm;
-
       if (outputAge < 18) {
         price = price * 0.8;
       } else if (outputAge > 65) {
         price = price * 0.6;
       }
-
     printedPrice.textContent = price.toFixed(2) + "€";
   }
+);
+
+eliminateTicket.addEventListener('click',
+
+  function() {
+
+    // Nascondi 'Il tuo biglietto'
+    ticketPrinted.classList.remove('active');
+
+  }
+
 );
 
 
