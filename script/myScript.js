@@ -40,7 +40,7 @@ generateTicket.addEventListener('click',
     ticketPrinted.classList.add('active');
 
     // Stampa del nome all'interno di Span nella sez. 'Il tuo biglietto'
-    const outputUserName = userName.value;
+    const outputUserName = inputUserName.value;
 
     printedName.innerHTML = outputUserName;
 
