@@ -7,36 +7,57 @@
   <title>Biglietto JS</title>
 </head>
 <body>
-  
-  <div class="ticket-data">
-    <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
-    <form>
-      <!-- Nome e cognome -->
-      <label for="userName">Inserisci il tuo nome e cognome:</label>
-      <input type="text" id="userName">
-      <br>
-      <!-- Km da percorrere -->
-      <label for="km">Quanti km devi percorrere?:</label>
-      <input type="number" id="km" min="0">
-      <br>
-      <!-- Età -->
-      <label for="age">Quanti anni hai?:</label>
-      <input type="number" id="age" min="0">
-      <br>
-      <!-- Genera -->
-      <button type="button" id="generateTicket">Genera</button>
-      <!-- Annulla -->
-      <button type="button" id="eliminateTicket">Annulla</button>
-    </form>
-  </div>
 
-  <div class="ticket-printed">
-    <h2>IL TUO BIGLIETTO</h2>
-    <h3>DETTAGLI PASSEGGERO</h3>
-    <h4>Nome Passeggero:</h4>
-    <span id="printedName"></span>
-    <h4>Costo biglietto:</h4>
-    <span id="printedPrice"></span>
+  <div class="container">
+    <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+    <div class="ticket-data">
+      <form>
+        <div class="top">
+          <!-- Nome e cognome -->
+          <div class="user">
+          <label for="userName">Nome e cognome:</label>
+          <input type="text" placeholder="Inserisci il tuo nome" id="userName">
+          </div>
+    
+          <!-- Km da percorrere -->
+          <div class="distance">
+          <label for="km">Km da percorrere</label>
+          <input type="number" placeholder="Inserisci i km" id="km" min="1">
+          </div>
+    
+          <!-- Età -->      
+          <div class="age">
+          <label for="age">Età</label>
+          <input type="number" placeholder="Inserisci la tua età" id="age" min="1" max="100">
+          </div>
+        </div>
+
+        <!-- Bottoni -->
+      <div class="bottom">
+        <!-- Genera -->
+        <button type="button" id="generateTicket">Genera</button>
+        <!-- Annulla -->
+        <button type="button" id="eliminateTicket">Annulla</button>        
+      </div>
+      </form>
+    </div>
+  
+    <h2 id="your-ticket">IL TUO BIGLIETTO</h2>
+    <div class="ticket-printed">
+      <h3>DETTAGLI PASSEGGERO</h3>
+      <div class="output-ticket">
+        <!-- Nome Passeggero -->
+        <div class="passengers-name">
+          <h4>Nome Passeggero:</h4>
+          <span id="printedName"></span>
+        </div>
+        <!-- Prezzo del Biglietto -->
+        <div class="ticket-price">
+          <h4>Costo biglietto:</h4>
+          <span id="printedPrice"></span>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script type="text/javascript" src="script/myScript.js"></script>

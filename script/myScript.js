@@ -22,7 +22,6 @@ const generateTicket = document.getElementById('generateTicket');
 // Dichiarazione Button (annulla)
 const eliminateTicket = document.getElementById('eliminateTicket');
 
-
 // Dichiarazione Classe 'Il tuo biglietto'
 const ticketPrinted = document.querySelector(".ticket-printed")
 
@@ -63,8 +62,11 @@ eliminateTicket.addEventListener('click',
     // Nascondi 'Il tuo biglietto'
     ticketPrinted.classList.remove('active');
 
+    // Rimozione Parametri Inseriti
+    inputUserName.value = '';
+    inputKm.value = '';
+    inputAge.value = '';
   }
-
 );
 
 
